@@ -107,7 +107,7 @@ Sound 오브젝트의 **이름**을 단어 토큰 단위로 검사합니다.
 `_` / Space / `-` / `.` 등으로 구분된 단어 단위입니다.  
 `UI` → `UI_Click` ✓ · `NPC_UI` ✓ · `BUILD` ✗ · `QUIT` ✗
 
-### 스캔 2 — Work Unit / 경로 기준
+### 스캔 2 — Work Unit / 경로 기준 (추천)
 
 Sound의 **소속 경로**를 검사합니다.  
 검색 대상: Work Unit 이름 + Work Unit 전체 경로 + 오브젝트 상위 계층 경로 (Sound 이름 제외)
