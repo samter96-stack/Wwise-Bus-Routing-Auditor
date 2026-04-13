@@ -1,4 +1,5 @@
 # Wwise Bus Routing Auditor
+<img width="1490" height="1003" alt="image" src="https://github.com/user-attachments/assets/db1e4cc7-0c6d-4c69-84d0-b6ef66e57f2b" />
 
 Wwise Authoring Tool의 **Tools 메뉴**에서 실행하는 버스 라우팅 검수 툴입니다.  
 프로젝트 전체 Sound 오브젝트를 스캔하여 **에셋 이름** 또는 **Work Unit / 계층 경로** 기준으로  
