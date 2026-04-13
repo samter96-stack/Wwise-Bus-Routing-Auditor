@@ -59,6 +59,30 @@
 
 ---
 
+## 2026-04-13  —  UI 전면 개편 (상업용 플러그인 수준)
+
+### 디자인 시스템 교체
+- **컬러 팔레트**: GitHub Dark 테마 기반 — `#0D1117` 배경, `#58A6FF` 액센트, `#3FB950` OK, `#D29922` 경고
+- **타이포그래피**: Segoe UI (UI 텍스트 전체) + Consolas (데이터/코드)
+
+### 애니메이션 버튼 (`_ab` 팩토리)
+- 8가지 프리셋: primary, danger, ghost, add, add_bus, remove, lang, muted
+- `<Enter>` hover / `<Button-1>` press / `<ButtonRelease-1>` release 상태 전환
+- `disabled` 상태에서는 애니메이션 비활성화
+
+### 인터랙션 개선
+- **Entry 포커스 글로우**: `<FocusIn>/<FocusOut>` 바인딩으로 `highlightbackground` 색 전환
+- **Treeview 교차 행**: `row_e`/`row_o` 태그 + `violation`/`unset` 포어그라운드 멀티태그
+- **상태 도트 펄싱**: WAAPI 연결 중 `root.after()` 루프로 도트 색 토글
+
+### 레이아웃 재설계
+- 헤더바: ◈ 아이콘 + 제목 + 버전 / 중앙 상태 표시 / 우측 버튼
+- 룰 패널: 2px 액센트 상단 바 + BG2 카드, 컬럼 헤더 분리
+- 액션바: primary 스캔 버튼 + ghost 보조 버튼 + danger 재라우팅 버튼 계층화
+- 재라우팅 다이얼로그: 헤더 액센트 바, 교차 행 테이블, 하단 취소/적용 푸터
+
+---
+
 ## 2026-04-13  —  GitHub 배포 및 검증
 
 ### 배포
