@@ -233,6 +233,7 @@ Wwise-Bus-Routing-Auditor\
 ---
 
 ## 버전
+저작자 : samter96
 
 **V.1.0.0** — 2026-04-13
 
