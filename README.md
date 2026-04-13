@@ -236,6 +236,3 @@ Wwise-Bus-Routing-Auditor\
 
 **V.1.0.0** — 2026-04-13
 
----
-
-*Made with [Claude Code](https://claude.ai/claude-code)*
