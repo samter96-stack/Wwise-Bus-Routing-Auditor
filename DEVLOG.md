@@ -56,3 +56,27 @@
 - **Silence 등 내부 생성 SFX → Master Audio Bus**: Sound 자체 stale 제외로 Phase 1+2 모두 실패 → Phase 3 추가: Phase 1+2 결과가 Master Audio Bus일 때만 Sound 자신의 `@OutputBus` 사용 (ADM File3 회귀 없음 — 그 Sound는 Phase 2에서 처리됨)
 - **OR 행 정렬 어긋남**: src_section/bus_section 별도 프레임 → 단일 grid(`g`) 방식으로 재작성. 소스 OR·버스 OR 행이 같은 grid row를 공유하여 나란히 표시, 삭제 시 빈 행 공간 자동 소멸
 - **`_check_workunit_rules` OR 로직 누락**: `extra_work_unit_keywords`가 JSON 저장은 됐으나 검사 조건에 반영 안 됨 → `all_src = [work_unit_keyword] + extra_work_unit_keywords` OR 로 수정
+
+---
+
+## 2026-04-13  —  GitHub 배포 및 검증
+
+### 배포
+- GitHub 레포 생성: `https://github.com/samter96/Wwise-Bus-Routing-Auditor`
+- 계정명 `samter96-stack` → `samter96` 변경, 전체 커밋 author `samter96@gmail.com` 으로 통일 (rebase --root)
+
+### install_addon.bat 버그 수정
+- **원인**: PowerShell 명령을 `^` 줄 연결로 3줄에 분리 → 빈 줄이 연결을 끊어 명령 미전달
+- **추가 오류**: `%LAUNCH_PATH:\\=\\\\%` 이중 이스케이프 → JSON 경로 4중 백슬래시 오류
+- **수정**: PowerShell 명령 한 줄 통합, `%LAUNCH_PATH%` 그대로 전달 (ConvertTo-Json이 `\` → `\\` 자동 처리)
+
+### 클린 설치 검증 (2회)
+- 로컬 전체 삭제 → GitHub 클론 → `install.bat` (uv Python 탐지, .venv, waapi-client) → `install_addon.bat` (JSON 생성) 모두 정상
+
+### V.2.0 알고리즘 제안서
+- 5-Tier 알고리즘 설계 제안서 PDF 제작 → 바탕화면 저장
+  - Tier 1: Signal Flow Graph (고아/순환/컨버전스 탐지)
+  - Tier 2: 의미론적 카테고리 자동 분류 (내장 매핑 테이블)
+  - Tier 3: 프로젝트 관습 자동 학습 (클러스터링)
+  - Tier 4: Multi-Criteria 복합 스코어링 (Critical/Warning/Info)
+  - Tier 5: AI 임베딩 이상 탐지 (로컬 + LLM 옵션)
