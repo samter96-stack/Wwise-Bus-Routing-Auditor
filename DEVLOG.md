@@ -63,7 +63,6 @@
 
 ### 배포
 - GitHub 레포 생성: `https://github.com/samter96/Wwise-Bus-Routing-Auditor`
-- 계정명 `samter96-stack` → `samter96` 변경, 전체 커밋 author `samter96@gmail.com` 으로 통일 (rebase --root)
 
 ### install_addon.bat 버그 수정
 - **원인**: PowerShell 명령을 `^` 줄 연결로 3줄에 분리 → 빈 줄이 연결을 끊어 명령 미전달
